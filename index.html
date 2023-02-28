@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meal Planner</title>
+  <link rel="stylesheet" href="./main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- pre-loader -->
+  <div id="preloader">
+    <img src="./img/preloader.gif" alt="" />
+  </div>
+  <div id="form-container">
+    <!-- slideshow -->
+    <section id="slide-show">
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade slide-1">
+          <p id="slide-show-title">
+            Meal planner <br />
+            365,000+ recipes
+          </p>
+          <img class="slide-img slide-img-1" src="img/1.png" />
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-img" src="img/2.png" />
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-img" src="img/3.png" />
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-img" src="img/4.png" />
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-img" src="img/5.png" />
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-img" src="img/6.png" />
+        </div>
+      </div>
+    </section>
+    <!-- end slideshow -->
+
+    <form id="form">
+      <h1 id="form-title">
+        “The first wealth is health.” – Ralph Waldo Emerson
+      </h1>
+      <!-- age -->
+      <input class="style" type="text" id="input-age" name="input-age" placeholder="Age"
+        value="30" />
+      <!-- gender -->
+      <div class="btn-wrap style">
+        <div class="radio-wrap">
+          <input checked="checked" type="radio" id="input-gender" name="input-gender"
+            value="5" /><span>Male</span>
+        </div>
+        <div class="radio-wrap">
+          <input type="radio" id="input-gender" name="input-gender"
+            value="-161" /><span>Female</span>
+        </div>
+      </div>
+      <!-- height -->
+      <input class="style" type="text" placeholder="Height (cm)" id="input-height"
+        name="input-height" value="175" />
+      <!-- weight -->
+      <input class="style" type="text" placeholder="Weight (kg)" id="input-weight"
+        name="input-weight" value="75" />
+      <!-- goal -->
+      <select class="style" name="goal" id="input-goal">
+        <option value="">Select Your Goal</option>
+        <option selected="selected" value="*1%">
+          Maintain Current Weight
+        </option>
+        <option value="/20%">Lose Weight</option>
+        <option value="*20%">Gain Weight</option>
+      </select>
+
+      <!-- activities -->
+      <select class="style" name="activitities" id="input-active">
+        <option value="">Select Your Active Level</option>
+        <option selected="selected" value="1.2">
+          Sedentary (Little or no exercise)
+        </option>
+        <option value="1.375">
+          Lightly active (Light exercise/sports 3-5 days a week)
+        </option>
+        <option value="1.55">
+          Moderately active (Moderate exercise/sports 3-5 days a week)
+        </option>
+        <option value="1.725">
+          Very active (Hard exercise/sports 6-7 days a week)
+        </option>
+        <option value="1.9">
+          Extra active (Hard exercise/sports 6-7 days a week, plus physical
+          job)
+        </option>
+      </select>
+
+      <!-- submit btn -->
+      <input id="submit-btn" type="submit" value="Continue" />
+      <!-- skip btn -->
+      <button id="skip-btn">Skip (random plan)</button>
+    </form>
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="container">
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="index.html"><img class="img" src="./img/logo.png" alt="logo" /></a>
+    </div>
+    <!-- NUTRTITION VALUE -->
+    <section class="nutrition background">
+      <h2 class="title">YOUR RECOMMENDED DAILY INTAKES:</h2>
+      <article class="value-container">
+        <!-- single value -->
+        <div class="value-single calories">
+          <p class="value-title">Calories</p>
+          <p id="recommended-calories" class="value odometer">2000</p>
+        </div>
+        <!-- single value -->
+        <div class="value-single protein">
+          <p class="value-title">Protein</p>
+          <p id="recommended-protein" class="value value-1">150</p>
+        </div>
+        <!-- single value -->
+        <div class="value-single carbs">
+          <p class="value-title">Carbs</p>
+          <p id="recommended-carbs" class="value value-2">200</p>
+        </div>
+        <!-- single value -->
+        <div class="value-single fat">
+          <p class="value-title">Fat</p>
+          <p id="recommended-fat" class="value value-3">150</p>
+        </div>
+      </article>
+    </section>
+    <!-- NAV -->
+    <nav class="nav">
+      <button class="button btn-1">CLEAR</button>
+      <button class="button btn-3">RANDOM</button>
+      <div id="setting-btn">
+        <i class="fas fa-cog"></i>
+      </div>
+    </nav>
+    <!-- SELECTIOM -->
+    <aside class="selection background">
+      <!-- OPTIONS -->
+      <!-- <select class="custom-select" name="meal-type" id="meal-type">
+          <option>CHOOSE MEAL TYPE</option>
+          <option value="ONE">ONE</option>
+          <option value="TWO">TWO</option>
+          <option value="THREE">THREE</option>
+        </select> -->
+      <!-- Lists -->
+      <ul id="list" class="old-parent"></ul>
+    </aside>
+    <!-- TABLE -->
+    <section class="table background" id="capture">
+      <ul class="lists">
+        <ul id="list" class="list-1 new-parent">
+          <div class="day disable-select">
+            <h3>MON</h3>
+          </div>
+        </ul>
+        <ul id="list" class="list-2 new-parent">
+          <div class="day disable-select">
+            <h3>TUE</h3>
+          </div>
+        </ul>
+        <ul id="list" class="list-3 new-parent">
+          <div class="day disable-select">
+            <h3>WED</h3>
+          </div>
+        </ul>
+        <ul id="list" class="list-4 new-parent">
+          <div class="day disable-select">
+            <h3>THU</h3>
+          </div>
+        </ul>
+        <ul id="list" class="list-5 new-parent">
+          <div class="day disable-select">
+            <h3>FRI</h3>
+          </div>
+        </ul>
+        <ul id="list" class="list-6 new-parent">
+          <div class="day disable-select">
+            <h3>SAT</h3>
+          </div>
+        </ul>
+        <ul id="list" class="list-7 new-parent">
+          <div class="day disable-select">
+            <h3>SUN</h3>
+          </div>
+        </ul>
+      </ul>
+    </section>
+    <!-- MODAL -->
+    <section class="modal-container">
+      <article class="modal">
+        <div class="modal-content"></div>
+        <button class="modal-close">CLOSE</button>
+      </article>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <button id="grocery-btn">CONTACT US</button>
+    </footer>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
